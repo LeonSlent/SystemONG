@@ -34,7 +34,7 @@ public abstract class Animal {
     public String getEspecie(){
         return especie;
     }
-    public String getRaça() {
+    public String getRaca() {
         return raca;
     }
     public int getIdade() {

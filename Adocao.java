@@ -13,55 +13,42 @@ public class Adocao {
     public Funcionario getFuncionario() {
         return funcionario;
     }
-
     public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
-
     public String getStatus() {
         return status;
     }
-
     public void setStatus(String status) {
         this.status = status;
     }
-
     public Adotante getAdotante() {
         return adotante;
     }
-
     public void setAdotante(Adotante adotante) {
         this.adotante = adotante;
     }
-
     public LocalDate getDataAdocao() {
         return dataAdocao;
     }
-
     public void setDataAdocao(LocalDate dataAdocao) {
         this.dataAdocao = dataAdocao;
     }
-
     public Cachorro getCachorro() {
         return cachorro;
     }
-
     public void setCachorro(Cachorro cachorro) {
         this.cachorro = cachorro;
     }
-
     public Gato getGato() {
         return gato;
     }
-
     public void setGato(Gato gato) {
         this.gato = gato;
     }
-
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }
@@ -76,7 +63,12 @@ public class Adocao {
         this.status = "Pendente"; //Status pendente é o status inicial
 
         //Registrar o animal na lista de adoções do adotante
-        this.adotante.adicionarAnimalAdotado(gato, cachorro);
+        if (gato != null) {
+            this.adotante.adicionarAnimalAdotado(gato);
+        }
+        if (cachorro != null) {
+            this.adotante.adicionarAnimalAdotado(cachorro);
+        }
 
     }
 }
