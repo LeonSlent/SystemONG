@@ -1,4 +1,4 @@
-**Desenvolvido por:**
+**Em desenvolvimento by:**
 
 Leonardo Gonçalves Martins - slentmartz@gmail.com
 
