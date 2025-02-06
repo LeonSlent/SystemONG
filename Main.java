@@ -16,7 +16,8 @@ public class Main {
         Cachorro cachorro = new Cachorro(2, "Rex", "Canino", "Labrador", 4, "Grande", false, "Saudável", true, true);
 
         // Criando a adoção
-        Adocao adocao = new Adocao(adotante, funcionario, gato, cachorro);
+        new Adocao(adotante, funcionario, gato);
+        new Adocao(adotante, funcionario, cachorro);
 
         // Exibindo os animais adotados
         System.out.println("Animais adotados por " + adotante.getNome() + ":");

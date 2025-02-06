@@ -3,8 +3,7 @@ import java.util.UUID;
 
 public class Adocao {
     private String id;
-    private Gato gato;
-    private Cachorro cachorro;
+    private Animal animal;
     private LocalDate dataAdocao;
     private Adotante adotante;
     private String status; //Pendente, aprovado ou cancelado
@@ -34,18 +33,6 @@ public class Adocao {
     public void setDataAdocao(LocalDate dataAdocao) {
         this.dataAdocao = dataAdocao;
     }
-    public Cachorro getCachorro() {
-        return cachorro;
-    }
-    public void setCachorro(Cachorro cachorro) {
-        this.cachorro = cachorro;
-    }
-    public Gato getGato() {
-        return gato;
-    }
-    public void setGato(Gato gato) {
-        this.gato = gato;
-    }
     public String getId() {
         return id;
     }
@@ -53,22 +40,17 @@ public class Adocao {
         this.id = id;
     }
 
-    public Adocao(Adotante adotante, Funcionario funcionario, Gato gato, Cachorro cachorro) {
+    public Adocao(Adotante adotante, Funcionario funcionario, Animal animal) {
         this.id = UUID.randomUUID().toString(); //Adiciona um ID unico
         this.adotante = adotante;
-        this.gato = gato;
-        this.cachorro = cachorro;
+        this.animal = animal;
         this.funcionario = funcionario;
         this.dataAdocao = LocalDate.now();
         this.status = "Pendente"; //Status pendente é o status inicial
 
-        //Registrar o animal na lista de adoções do adotante
-        if (gato != null) {
-            this.adotante.adicionarAnimalAdotado(gato);
-        }
-        if (cachorro != null) {
-            this.adotante.adicionarAnimalAdotado(cachorro);
-        }
+            animal.setAdotado(true);
+            adotante.adicionarAnimalAdotado(animal);
+
 
     }
 }
