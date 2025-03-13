@@ -2,7 +2,9 @@
 
 Leonardo Gonçalves Martins - slentmartz@gmail.com
 
-Beatriz Ivano - beatrizivano56@gmail.com
+Beatriz Ivano dos Santos - beatrizivano56@gmail.com
+
+Marcelo Ribeiro Martins - marcelormartins0@gmail.com
 
 # SystemONG
 
@@ -14,13 +16,15 @@ Este projeto consiste em um sistema de gerenciamento de adoção de animais para
 
 O sistema gerencia o cadastro de adotantes, funcionários, animais e adoções, com funcionalidades para registrar novas adoções, listar adoções realizadas e manter os dados organizados e acessíveis.
 
+Diagrama de relacionamentos: https://drive.google.com/file/d/1T5B1wSrKgGFEdWjnPfmLF6BQ0cLqfkOb/view?usp=sharing
+
 **Funcionalidades Principais:**
 
 Cadastro de Adotantes: Permite o registro de adotantes com seus dados pessoais e endereço.
 
 Cadastro de Funcionários: Gerencia informações dos funcionários responsáveis pela administração das adoções.
 
-Cadastro de Animais: Registra informações sobre os animais disponíveis para adoção, incluindo dados como nome, idade, tipo e status de adoção.
+Cadastro de Animais: Registra informações sobre os animais disponíveis para adoção, incluindo dados como nome, idade, tipo, vacinas e status de adoção.
 
 Registro de Adoções: Permite que um funcionário registre uma adoção realizada por um adotante, vinculando um animal ao adotante e ao funcionário que realizou a adoção.
 
@@ -35,6 +39,8 @@ Funcionario: Representa o funcionário da ONG, que registra as adoções. Possui
 Animal: Representa o animal disponível para adoção. Está relacionado com a classe Adocao.
 
 Adocao: Representa o processo de adoção de um animal por um adotante, realizado por um funcionário (composição).
+
+Vacina: Representa as vacinas que o animal tomou.
 
 ONG: Representa a organização e possui listas de funcionários e animais (agregação).
 
