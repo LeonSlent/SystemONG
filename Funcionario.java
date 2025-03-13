@@ -7,6 +7,15 @@ public class Funcionario extends Pessoa {
     private double salario;
     private LocalDate dataDeContatacao;
     private int cargaHoraria;
+    
+    public Funcionario(String nome, String cpf, String telefone, String email, String endereco) {
+    super(nome, cpf, endereco, telefone, email);
+    this.id = UUID.randomUUID().toString();
+    this.cargo = "";
+    this.salario = 0;
+    this.dataDeContatacao = LocalDate.now();
+    this.cargaHoraria = 0;
+    }
 
     public String getId() {
         return id;
@@ -39,12 +48,5 @@ public class Funcionario extends Pessoa {
         this.cargo = cargo;
     }
 
-    public Funcionario(String nome, String cpf, String telefone, String email, String endereco) {
-        super(nome, cpf, endereco, telefone, email);
-        this.id = UUID.randomUUID().toString();
-        this.cargo = "";
-        this.salario = 0;
-        this.dataDeContatacao = LocalDate.now();
-        this.cargaHoraria = 0;
-    }
+    
 }
